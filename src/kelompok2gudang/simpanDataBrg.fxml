@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="519.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton fx:id="btn_back" layoutX="70.0" layoutY="351.0" onAction="#backPetugasAct" style="-fx-background-color: #ea8383;" text="Kembali" />
+      <Label layoutX="195.0" layoutY="39.0" text="Tambah Data Barang">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_idBrg" labelFloat="true" layoutX="70.0" layoutY="106.0" prefHeight="31.0" prefWidth="146.0" promptText="ID Barang" />
+      <JFXTextField fx:id="txt_jenisBrg" labelFloat="true" layoutX="70.0" layoutY="274.0" prefHeight="31.0" prefWidth="146.0" promptText="Jenis Barang" />
+      <JFXTextField fx:id="txt_tipeBrg" labelFloat="true" layoutX="300.0" layoutY="106.0" prefHeight="31.0" prefWidth="146.0" promptText="Tipe Barang" />
+      <JFXTextField fx:id="txt_namaBrg" labelFloat="true" layoutX="70.0" layoutY="182.0" prefHeight="31.0" prefWidth="146.0" promptText="Nama Barang" />
+      <JFXTextField fx:id="txt_stok" labelFloat="true" layoutX="300.0" layoutY="274.0" prefHeight="31.0" prefWidth="146.0" promptText="Stok Tersedia" />
+      <TextField fx:id="txt_namaTempat" layoutX="299.0" layoutY="217.0" promptText="otomatis" />
+      <Label layoutX="299.0" layoutY="182.0" text="ID Tempat" />
+      <JFXComboBox fx:id="cmb_idTempat" layoutX="366.0" layoutY="178.0" prefHeight="25.0" prefWidth="80.0" promptText="-pilih-" />
+      <JFXButton fx:id="btn_simpanBrg" layoutX="364.0" layoutY="351.0" onAction="#simpanBrgAct" style="-fx-background-color: #b4d455;" text="Simpan Data" />
+   </children>
+</Pane>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane prefHeight="600.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Barang">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          <Tab text="Tempat">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="Supplier">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblSupplier" layoutX="286.0" layoutY="70.0" onMouseClicked="#tblSupplierClicked" prefHeight="349.0" prefWidth="683.0">
+                          <columns>
+                            <TableColumn fx:id="clmIdSupplier" prefWidth="100.33331298828125" text="ID Supplier" />
+                            <TableColumn fx:id="clmNama" prefWidth="191.66668701171875" text="Nama" />
+                              <TableColumn fx:id="clmAlamat" prefWidth="256.0" text="Alamat" />
+                              <TableColumn fx:id="clmTelepon" prefWidth="136.3333740234375" text="Telepon" />
+                          </columns>
+                        </TableView>
+                        <Label fx:id="lblForm" layoutX="85.0" layoutY="77.0" text="Tambah Data Supplier" />
+                        <JFXTextField fx:id="txtIdSupplier" labelFloat="true" layoutX="45.0" layoutY="135.0" prefHeight="25.0" prefWidth="200.0" promptText="ID Supplier" />
+                        <JFXTextArea fx:id="txtAlamat" labelFloat="true" layoutX="44.0" layoutY="267.0" prefHeight="95.0" prefWidth="200.0" promptText="Alamat" />
+                        <JFXTextField fx:id="txtNama" labelFloat="true" layoutX="44.0" layoutY="180.0" prefHeight="25.0" prefWidth="200.0" promptText="Nama" />
+                        <JFXTextField fx:id="txtTelepon" labelFloat="true" layoutX="44.0" layoutY="224.0" prefHeight="25.0" prefWidth="200.0" promptText="Nomor Telepon" />
+                        <JFXButton fx:id="btnKembali" layoutX="53.0" layoutY="407.0" onAction="#btnKembali" text="Kembali" />
+                        <JFXButton fx:id="btnSimpan" layoutX="177.0" layoutY="407.0" onAction="#btnSimpanAction" text="Simpan" visible="false" />
+                        <JFXButton fx:id="btnHapus" layoutX="909.0" layoutY="436.0" onAction="#btnHapusAction" text="Hapus" />
+                        <JFXButton fx:id="btnTambah" layoutX="177.0" layoutY="407.0" onAction="#btnTambahAction" text="Tambah" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

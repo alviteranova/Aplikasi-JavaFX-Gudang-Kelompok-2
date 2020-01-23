@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kelompok2gudang.LoginController">
+   <children>
+      <JFXTextField fx:id="txt_username" labelFloat="true" layoutX="226.0" layoutY="193.0" prefHeight="34.0" prefWidth="248.0" promptText="Masukkan Username">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txt_passlihat" editable="false" labelFloat="true" layoutX="405.0" layoutY="277.0" prefHeight="34.0" prefWidth="182.0" promptText="Masukkan Kata Sandi" visible="false" />
+      <Label layoutX="328.0" layoutY="119.0" text="Login">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btn_login" layoutX="259.0" layoutY="336.0" onAction="#btnLoginAct" prefHeight="34.0" prefWidth="182.0" style="-fx-background-color: #b4d455;" text="LOGIN">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXPasswordField fx:id="txt_pass" labelFloat="true" layoutX="226.0" layoutY="260.0" prefHeight="34.0" prefWidth="204.0" promptText="Masukan Kata Sandi">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXPasswordField>
+      <JFXCheckBox fx:id="ckLihat" layoutX="445.0" layoutY="268.0" onMouseEntered="#ckLihatEntered" onMouseExited="#ckLihatExited" text="Lihat">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXCheckBox>
+   </children>
+</Pane>

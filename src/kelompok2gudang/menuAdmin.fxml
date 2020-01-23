@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="907.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kelompok2gudang.MenuAdminController">
+   <children>
+      <TabPane layoutX="1.0" prefHeight="529.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Akun">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="931.0">
+                     <children>
+                        <Label layoutX="496.0" layoutY="29.0" text="Manajemen Data Akun">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tblKaryawan1" layoutX="255.0" layoutY="73.0" onMouseClicked="#tblKaryawanClicked" prefHeight="355.0" prefWidth="624.0">
+                           <columns>
+                              <TableColumn fx:id="colNIP1" prefWidth="58.333343505859375" text="ID" />
+                              <TableColumn fx:id="colNama1" prefWidth="107.33334350585938" text="Username" />
+                              <TableColumn fx:id="colTgl1" prefWidth="106.0" text="Password" />
+                              <TableColumn fx:id="ColJk1" prefWidth="142.6666259765625" text="Nama Lengkap" />
+                              <TableColumn fx:id="ColAlamat1" prefWidth="115.6666259765625" text="No. Telp" />
+                              <TableColumn fx:id="ColTelepon1" prefWidth="101.3333740234375" text="Akses" />
+                           </columns>
+                        </TableView>
+                        <Label fx:id="lblFormKar1" layoutX="82.0" layoutY="64.0" text="Tambah Data Akun" />
+                        <JFXTextField fx:id="txt_id" labelFloat="true" layoutX="38.0" layoutY="108.0" prefHeight="25.0" prefWidth="191.0" promptText="ID Pengguna">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txt_username" labelFloat="true" layoutX="38.0" layoutY="154.0" prefHeight="25.0" prefWidth="191.0" promptText="Username">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txt_notelp" labelFloat="true" layoutX="37.0" layoutY="303.0" prefHeight="25.0" prefWidth="191.0" promptText="No. Telpon">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton fx:id="btn_kembali" layoutX="37.0" layoutY="410.0" onAction="#btnKembaliAct" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: #ea8383;" text="Kembali" />
+                        <JFXButton fx:id="btn_simpan" layoutX="146.0" layoutY="410.0" onAction="#btnSimpanAct" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #b4d455;" text="Tambah" />
+                        <JFXButton fx:id="btnHapus1" layoutX="813.0" layoutY="440.0" onAction="#hapusKaryawanAction" prefHeight="19.0" prefWidth="65.0" style="-fx-background-color: #b4d455;" text="Hapus">
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnSimpan1" layoutX="136.0" layoutY="456.0" onAction="#simpanAction" prefHeight="25.0" prefWidth="83.0" text="Simpan" visible="false" />
+                        <JFXButton fx:id="btnLogout1" layoutX="813.0" layoutY="16.0" onAction="#logoutAction" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #ea8383;" text="Logout" />
+                        <Separator layoutX="36.0" layoutY="86.0" prefWidth="200.0" />
+                        <JFXPasswordField layoutX="38.0" layoutY="202.0" prefWidth="189.0" />
+                        <JFXPasswordField fx:id="txt_pass" labelFloat="true" layoutX="37.0" layoutY="202.0" prefHeight="25.0" prefWidth="192.0" promptText="Password" />
+                        <JFXTextField fx:id="txt_nama" labelFloat="true" layoutX="37.0" layoutY="254.0" prefHeight="25.0" prefWidth="191.0" promptText="Nama Lengkap">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXComboBox fx:id="cmb_akses" layoutX="37.0" layoutY="354.0" onAction="#cmbAksesAct" prefHeight="25.0" prefWidth="191.0" promptText="Hak Akses" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Karyawan">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="931.0">
+                     <children>
+                        <Label layoutX="489.0" layoutY="28.0" text="Manajemen Data Karyawan">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <TableView fx:id="tblKaryawan" layoutX="255.0" layoutY="73.0" onMouseClicked="#tblKaryawanClicked" prefHeight="355.0" prefWidth="624.0">
+                          <columns>
+                            <TableColumn fx:id="colNIP" prefWidth="77.0" text="NIP" />
+                            <TableColumn fx:id="colNama" prefWidth="130.33331298828125" text="Nama Lengkap" />
+                              <TableColumn fx:id="colTgl" prefWidth="91.0" text="Tanggal Lahir" />
+                              <TableColumn fx:id="ColJk" prefWidth="100.0" text="Jenis Kelamin" />
+                              <TableColumn fx:id="ColAlamat" prefWidth="118.33331298828125" text="Alamat" />
+                              <TableColumn fx:id="ColTelepon" prefWidth="111.66668701171875" text="Telepon" />
+                          </columns>
+                        </TableView>
+                        <Label fx:id="lblFormKar" layoutX="74.0" layoutY="64.0" text="Tambah Data Karyawan" />
+                        <JFXTextField fx:id="txtNIP" labelFloat="true" layoutX="38.0" layoutY="108.0" prefHeight="25.0" prefWidth="191.0" promptText="NIP" />
+                        <JFXTextField fx:id="txtNama" labelFloat="true" layoutX="38.0" layoutY="154.0" prefHeight="25.0" prefWidth="191.0" promptText="Nama Lengkap" />
+                        <JFXTextField fx:id="txtTelepon" labelFloat="true" layoutX="38.0" layoutY="398.0" prefHeight="25.0" prefWidth="191.0" promptText="Telepon" />
+                        <JFXDatePicker fx:id="dateLahir" layoutX="38.0" layoutY="202.0" overLay="true" prefHeight="25.0" prefWidth="191.0" promptText="Tanggal Lahir" />
+                        <JFXComboBox fx:id="cmbJK" labelFloat="true" layoutX="38.0" layoutY="254.0" prefHeight="25.0" prefWidth="191.0" promptText="Jenis Kelamin" />
+                        <JFXTextArea fx:id="txtAlamat" labelFloat="true" layoutX="38.0" layoutY="303.0" prefHeight="70.0" prefWidth="191.0" promptText="Alamat" />
+                        <JFXButton fx:id="btnKembali" layoutX="35.0" layoutY="456.0" onAction="#kembaliAction" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: #ea8383;" text="Kembali" />
+                        <JFXButton fx:id="btnTambah" layoutX="150.0" layoutY="455.0" onAction="#tambahAction" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #b4d455;" text="Tambah" />
+                        <JFXButton fx:id="btnHapus" layoutX="813.0" layoutY="440.0" onAction="#hapusKaryawanAction" prefHeight="19.0" prefWidth="65.0" style="-fx-background-color: #b4d455;" text="Hapus">
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font></JFXButton>
+                        <JFXButton fx:id="btnSimpan" layoutX="136.0" layoutY="456.0" onAction="#simpanAction" prefHeight="25.0" prefWidth="83.0" text="Simpan" visible="false" />
+                        <JFXButton fx:id="btnLogout" layoutX="813.0" layoutY="16.0" onAction="#logoutAction" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #ea8383;" text="Logout" />
+                        <Separator layoutX="36.0" layoutY="86.0" prefWidth="200.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>
